@@ -1,0 +1,75 @@
+.toggle-panel {
+    display: table-cell;
+    height: inherit;
+    vertical-align: top;
+    position: relative;
+    background-color: #fff;
+}
+
+.toggle-panel .details-header {
+    height: 3em;
+    line-height: 3em;
+    margin-bottom: 1em;
+}
+
+.toggle-panel[data-side="left"] .details-header span {
+    float: left;
+    padding-left: 1em;
+}
+.toggle-panel[data-side="right"] .details-header span {
+    float: right;
+    padding-right: 1em;
+}
+
+.toggle-panel .side-desc {
+    top: 0;
+    height: 100%;
+    position: absolute;
+    width: 3em;
+    right: 0;
+}
+
+.toggle-panel .side-desc .inner-box {
+    height: 100%;
+    overflow: hidden;
+    width: 3em;
+    position: relative;
+}
+.toggle-panel .side-desc .inner-box .desc {
+    position: absolute;
+    right: 2.5em;
+    top: 3em;
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg); 
+    transform-origin: 100% 0 0;
+}
+
+.toggle-panel .side-desc .inner-box .desc strong {
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+.toggle-panel-action {
+    position: absolute !important;
+    top: 0 !important;
+    width: 3em;
+    height: 3em;
+    padding-top: 0.75em;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    z-index: 3;
+}
+
+.toggle-panel[data-side="left"] .toggle-panel-action {
+    right:0 !important;
+}
+.toggle-panel[data-side="right"] .toggle-panel-action {
+    left:0 !important;
+}
+
+.toggle-panel.hide,
+.toggle-panel .hide {
+    display: none;
+}
